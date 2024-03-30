@@ -1,0 +1,975 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #b0daff; /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5563b4;
+    border-radius: 8px; /* color of the thumb */
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header nav img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+header nav ul{
+    display: flex;
+    gap: 70px;
+}
+
+header nav ul li {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+header nav ul li::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: #5570b4; 
+    transition: width 1s; 
+}
+
+header nav ul li:hover::before {
+    width: 100%;
+}
+
+header nav ul li:hover{
+    transition: 1s;
+    color: #5562b4;
+}
+
+
+header nav :nth-child(3){
+    display: flex;
+    gap: 40px;
+}
+
+header nav :nth-child(3) div{
+    background-color: #5586b4;
+    border-radius: 50%;
+}
+
+header nav :nth-child(3)  i{
+    font-size: 15px;
+    color: #ffffff;
+    padding: 20px;
+}
+
+header nav #mobileBar i{
+    font-size: 30px;
+    color: #3f3f3f;
+}
+
+header nav #mobileBar{
+    display: none;
+}
+
+.homePage{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.homePage .data{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.homePage .data h2{
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #242424;
+    letter-spacing: 1.44px;
+    margin-bottom: 10px;
+}
+
+.homePage .data h1{
+    font-size: 60px;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    color: #556eb4;
+    letter-spacing: 1.44px;
+    margin-bottom: 20px;
+}
+
+.homePage .data p{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    letter-spacing: 1.44px;
+    width: 66vh;
+}
+
+.homePage .data button{
+    padding: 20px 40px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #556bb4;
+    border: none;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+
+.homePage img{
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    left: 30%;
+    top: 12vh;
+    z-index: -100;
+}
+
+
+.product{
+    margin-top: 100px;
+    padding: 40px;
+    width: 100%;
+    border-top: 2px solid #e0e0e0;
+}
+
+.product .main_title h1{
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.product .main_title img{
+    position: absolute;
+    z-index: -1;
+    width: 50vh;
+    left: 75vh;
+    top: 116vh;
+}
+
+.product .main_title{
+    margin-left: 45%;
+}
+
+.product .card-set{
+    width: 96%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-top: 10vh;
+}
+
+.product .card{
+    width: 94%;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.imageWrapper{
+    width: 100%;
+    height: 71%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product .card img{
+    width: 200px;
+    height: 200px;
+}
+
+.product .card:hover img{
+    transform: scale(1.1);
+}
+
+.product .card .brand{
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.product .card .title{
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #242424;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.product .card .star{
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.product .card .star i{
+    font-size: 20px;
+    color: #fcff35;
+}
+
+.product .card .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product .card .price h3{
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #5573b4;
+    letter-spacing: 1px;
+}
+
+.product .card .price button{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #557eb4;
+    border: none;
+    border-radius: 5px;
+}
+
+.about{
+    width: 100%;
+    height: auto;
+}
+
+.about .title{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background-image: url("/Assests/img/about/banner.png");
+    background-position: top;
+}
+
+.about .title h1{
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-top: 20vh;
+    /* padding-top: 7%; */
+    text-align: center;
+}
+
+.about .title p{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.about .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about .container img{
+    width: 80%;
+    height: 100%;
+}
+
+.about .container > :first-child{
+    padding:100px 0px 0px 100px;
+    width: 100%;
+}
+.about .container > :last-child{
+    width: 100%;
+    padding-top: 40px;
+}
+
+.about .container > :last-child h1{
+    font-size: 65px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+.about .container > :last-child p{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    width: 60%;
+}
+
+.about .container > :last-child button{
+    padding: 20px 40px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.about .app{
+    margin-top: 7%;
+    text-align: center;
+}
+
+.about .app h1{
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.about .app h1 span{
+    color: #5b55b4;
+}
+
+.about video{
+    margin-top: 3%;
+    width: 50%;
+    border-radius: 10px;
+}
+.about .tag {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 60px;
+    margin-left: 100px;
+    gap: 20px;
+}
+
+.about .tag .card{
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.about .tag .card img{
+    width: 100%;
+    padding: 10px;
+}
+
+.about .tag .card h1{
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    background-color: #bcceff5b;
+}
+
+.review{
+    width: 100%;
+    height: auto;
+}
+
+.review .card{
+    width: 25%;
+    text-align: center;
+    border: 1px solid #585858;
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+    border-radius: 8px;
+}
+
+.review .card p{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.review .card .star i{
+    font-size: 20px;
+    color: #daff35;
+    gap: 5px;
+}
+
+.review .card-set{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    gap: 50px;
+}
+
+.review .title{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    background-color: #5580b4;
+    background-position: top;
+}
+
+.review .title h1{
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-top: 20vh;
+    padding-top: 3%;
+}
+
+.review .title p{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #afafaf;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    padding-bottom: 3%;
+}
+
+.contact{
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    margin-top: 60px;
+    padding-bottom: 130px;
+}
+
+.contact > div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact > div > :first-child{
+    padding: 100px 0px 0px 100px;
+    width: 100%;
+}
+
+.contact > div > :last-child{
+    width: 100%;
+    padding-top: 40px;
+}
+
+.contact > div > :first-child h1{
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.contact > div > :first-child p{
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    width: 60%;
+}
+
+.contact > div > :first-child div{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact > div > :first-child div input{
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.contact > div > :first-child button{
+    padding: 20px 40px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #5581b4;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.contact > div > :last-child iframe{
+    width: 90%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid #5580b4;
+    padding-top: 6%;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    background-color: #5576b4;
+}
+
+footer h1{
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+footer p{
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+footer > :first-child div{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+/* .contact .title{
+    width: 100%;
+    text-align: center;
+} */
+
+/* .contact .title h1{
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #5db455;
+    letter-spacing: 1px;
+} */
+
+
+/* Media Query */
+
+@media screen and (max-width: 1440px) {
+    .homePage img{
+        width: 800px;
+        left: 500px;
+        top: 13vh;
+        
+    }
+
+    .homePage .data{
+        left: 5%;
+    }
+
+    .homePage .data p{
+        width: 70vh;
+    }
+
+    .product .card-set{
+        margin-left: 2vh;
+    }
+
+    .product .main_title img {
+        left: 63vh;
+        top: 119vh;
+    }
+
+    .about {
+        width: 106%;
+    }
+
+    .about .tag {
+        margin-left: 37px;
+    }
+
+    .review {
+        width: 107%;
+    }
+
+    .review .card-set {
+        width: 97%;
+    }
+
+    .contact {
+        width: 106%;
+    }
+
+    .contact > div > :last-child {
+        padding-left: 27px;
+    }
+
+    footer{
+        width: 105%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .homePage{
+        width: 108%;
+    }
+
+    .homePage .data p {
+        width: 51vh;
+    }
+
+    .product .card-set{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product .card .title {
+        font-size: 26px;
+    }
+
+    .product .main_title img {
+        left: 41vh;
+    }
+
+    .about {
+        width: 108%;
+    }
+
+    .about .container {
+        gap: 56px;
+    }
+    
+    .about .container > :last-child p {
+        width: 79%;
+    }
+
+    .review {
+        width: 108%;
+    }
+
+    .review .card {
+        width: 89%;
+    }
+
+    footer{
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    header nav ul{
+        display: none;
+    }
+
+    header nav :nth-child(3){
+        display: none;
+    }
+
+    header nav #mobileBar{
+        display: block;
+        margin-right: 10px;
+    }
+
+    .homePage img{
+        width: 120%;
+        left: -9vh;
+        opacity: 37%;
+    }
+
+    .homePage .data {
+        text-align: center;
+        margin-left: 22%;
+    }
+
+    .product .card-set{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product .main_title img {
+        left: 26vh;
+    }
+
+    .product {
+        padding-left: 10px;
+    }
+
+    .about .tag{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about .title {
+        height: 26%;
+    }
+
+    .about .container > :last-child h1 {
+        font-size: 50px;
+    }
+
+    .about .container > :last-child p {
+        font-size: 16px;
+        width: 97%;
+    }
+
+    .review .card-set {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review {
+        width: 110%;
+    }
+
+    .review .card-set {
+        width: 94%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .review .card {
+        width: 94%;
+    }
+
+    .contact > div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact > div > :first-child {
+        text-align: center;
+        width: 90%;
+    }
+
+    .contact > div > :first-child p , h1 , button{
+        width: auto;
+        margin-right: 70px;
+    }
+
+    .contact iframe{
+        margin-left: 4vh;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+
+    .homePage {
+        width: 160%;
+        height: 130vh;
+        overflow: hidden;
+    }
+
+    .homePage img {
+        width: 220%;
+        left: -57vh;
+        opacity: 37%;
+    }
+
+    .homePage .data p {
+        width: 62vh;
+    }
+
+    .product .card-set{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product {
+        width: 148%;
+    }
+
+    .homePage .data {
+        text-align: center;
+        margin-left: 11%;
+        margin-top: 14vh;
+    }
+
+    .product .main_title img {
+        left: 17vh;
+        top: 149vh;
+    }
+
+    .about .container{
+        display: block;
+    }
+
+    .about {
+        width: 160%;
+    }
+
+    .about .container img{
+        margin: 43px 0px 0px 73px
+    }
+
+    .about .container > :first-child {
+        padding: 0px;
+    }
+
+    .about .container > :last-child {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about .container > :last-child p {
+        font-size: 25px;
+        width: 95%;
+        margin-left: 24px;
+    }
+
+    .about video {
+        width: 87%;
+    }
+
+    .about .tag {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        width: 162%;
+    }
+
+    .review {
+        width: 162%;
+    }
+
+    .contact {
+        width: 154%;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 42px;
+        width: 152%;
+    }
+
+}
+
+@media screen and (max-width: 375px){
+
+    .homePage .data p {
+        width: 57vh;
+    }
+
+    .homePage img {
+        width: 250%;
+        height: 190vh;
+    }
+
+    .product .main_title {
+        margin-left: 38%;
+    }
+
+    .product .main_title img {
+        left: 10vh;
+    }
+
+    .about {
+        width: 162%;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+
+    header nav #mobileBar {
+        display: block;
+        margin-right: 37px;
+    }
+
+    .homePage .data p {
+        width: 47vh;
+    }
+
+    .homePage {
+        width: 164%;
+    }    
+    
+    .homePage img {
+        left: -52vh;
+    }
+
+    .product .main_title img {
+        left: 6vh;
+    }
+
+    .about {
+        width: 169%;
+    }
+
+    footer{
+        width: 157%;
+    }
+
+    .about .container h1 , button{
+        margin-left: 92px;
+    }
+
+    .review{
+        width: 169%;
+    }
+
+    .about .app h1{
+        margin-left: 50px;
+    }
+
+}
