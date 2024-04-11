@@ -206,7 +206,7 @@ header nav #mobileBar{
 }
 
 .product .card{
-    width: 94%;
+    width: 100%;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
     padding: 20px;
@@ -220,7 +220,7 @@ header nav #mobileBar{
 }
 
 .product .card img{
-    width: 200px;
+    /* width: 200px; */
     height: 200px;
 }
 
