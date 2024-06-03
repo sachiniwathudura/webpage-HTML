@@ -81,7 +81,6 @@ header nav ul li:hover{
     color: #5562b4;
 }
 
-
 header nav :nth-child(3){
     display: flex;
     gap: 40px;
